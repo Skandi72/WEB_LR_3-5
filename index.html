@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css "/>
+    <title>Parfume</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.2.0/uuid.min.js"></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="brand">
+                <button onclick="openMenu()">
+                    &#9776;
+                </button>
+                <a href="index.html">Parfume</a>
+            </div>
+            <div>
+                <input id="inputfind" class="header-search"> 
+                <button id="buttonfind" class="">Search</button>
+                <button id="buttonclear"  class="">Clear</button>
+            </div>
+            <div class="header-links">
+                <a href="admin.html">Admin</a>
+            </div>
+        </header>
+        
+        <aside class="sidebar">
+            <div>
+                <h3>Manage Films</h3>
+                <div class="sort-perfume">
+                    <h3>Sort</h3>
+                    <input type="checkbox" id="buttonsort">
+                </div>
+                <div class="Total-product">
+                    <h3>Total Volume parfum</h3>
+                    <button id="buttoncount" class="total-price">Cout</button>
+                    <h3 class="total_price">Value:</h3>
+                    <h3 id="Totalprice" class="">Empty please click count:(</h3>
+                </div>
+                <button class="sidebar-close-button" onclick="closeMenu ()">x</button>
+            </div>
+            <div class="edit">
+                <h2>Edit</h2>
+                <h3>Titel</h3>
+                <input id="title" class="Add_Parfume-tital" type="text" placeholder="Name parfume...">
+                <h3>Description</h3>
+                <input id="description" class="Add_Parfume-Description" type="text" placeholder="Description parfume..."> 
+                <h3>Volume</h3>
+                <input id="volume" class="Add_Parfume-Volume" type="number" placeholder="Volume parfume..."> 
+                <h3>Price</h3>
+                <input id="price" class="Add_Parfume-Praice" type="number" placeholder="Price parfume...">  
+            </div>
+        </aside>
+        
+        <main class="main">
+            <div class="content">
+                <ul id="products_container" class="products">
+                </ul>
+            </div>
+        </main>
+        <footer class="footer">
+            All right reserved
+        </footer>
+    </div>
+    <script>
+        function openMenu() {
+          document.querySelector(".sidebar").classList.add("open");
+        }
+        function closeMenu() {
+          document.querySelector(".sidebar").classList.remove("open")
+        }
+      </script>
+       <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
